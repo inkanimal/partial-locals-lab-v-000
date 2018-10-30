@@ -7,6 +7,6 @@
     <%= render partial: 'student', locals: {student: student} %>
 <% end %>
 
-<% if @students.blank? %>
+<% if @students.empty? %>
   There are no students containing the name <%= params[:search] %>.
 <% end %>
