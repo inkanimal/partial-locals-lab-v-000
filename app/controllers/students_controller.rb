@@ -24,7 +24,6 @@ class StudentsController < ApplicationController
     @students = Student.all
     if params[:search]
       @students = Student.search(params[:search])
-      redirect_to 'index'
     end
   end
    
