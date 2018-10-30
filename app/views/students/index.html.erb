@@ -3,10 +3,10 @@
     <%= submit_tag "Search", :name => nil %>
 <% end %>
 
-<% @students.all.each do |student| %>
+<% @students.each do |student| %>
     <%= render partial: 'student', locals: {student: student} %>
 <% end %>
 
-<% if @students.empty? %>
+<% if @students.blank? %>
   There are no students containing the name <%= params[:search] %>.
 <% end %>
